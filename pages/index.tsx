@@ -2,6 +2,8 @@ import StitchesLogo from 'components/StitchesLogo';
 import Head from 'next/head';
 import { styled } from 'stitches.config';
 
+import { FaceIcon, ImageIcon, SunIcon } from '@radix-ui/react-icons';
+
 const Box = styled('div', {});
 
 const Text = styled('p', {
@@ -12,7 +14,7 @@ const Text = styled('p', {
 const Link = styled('a', {
   fontFamily: '$system',
   textDecoration: 'none',
-  color: '$plum9',
+  color: '$blue12',
 });
 
 const Container = styled('div', {
@@ -26,6 +28,7 @@ const Container = styled('div', {
       },
       2: {
         maxWidth: '585px',
+        margin: '0 auto',
       },
       3: {
         maxWidth: '865px',
@@ -35,7 +38,6 @@ const Container = styled('div', {
 });
 
 const Home: React.FC = () => {
-  const a = 'llk';
   return (
     <Box css={{ py: '$6' }}>
       <Head key={Math.random()}>
@@ -45,10 +47,12 @@ const Home: React.FC = () => {
         <StitchesLogo />
         <Text as="h1">Hello, from Stitches.</Text>
         <Text>
-          For full documentation, visit{a}
+          For full documentation, visit{' '}
           <Link href="https://stitches.dev">stitches.dev</Link>.
         </Text>
-        <Text>some more text here</Text>
+        <FaceIcon />
+        <SunIcon />
+        <ImageIcon />
       </Container>
     </Box>
   );
