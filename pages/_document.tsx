@@ -9,6 +9,7 @@ export default class Document extends NextDocument {
         <Head>
           <style
             id="stitches"
+            // eslint-disable-next-line jam3/no-sanitizer-with-danger
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
         </Head>

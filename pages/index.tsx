@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { styled } from '../stitches.config';
-import StitchesLogo from '../components/StitchesLogo';
+import { styled } from 'stitches.config';
+import StitchesLogo from 'components/StitchesLogo';
 
 const Box = styled('div', {});
 
@@ -34,7 +34,7 @@ const Container = styled('div', {
   },
 });
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <Box css={{ py: '$6' }}>
       <Head key={Math.random()}>
@@ -50,4 +50,6 @@ export default function Home() {
       </Container>
     </Box>
   );
-}
+};
+
+export default Home;
