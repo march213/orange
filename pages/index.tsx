@@ -1,3 +1,4 @@
+import { Text } from 'components';
 import StitchesLogo from 'components/StitchesLogo';
 import Head from 'next/head';
 import { styled } from 'stitches.config';
@@ -5,11 +6,6 @@ import { styled } from 'stitches.config';
 import { FaceIcon, ImageIcon, SunIcon } from '@radix-ui/react-icons';
 
 const Box = styled('div', {});
-
-const Text = styled('p', {
-  fontFamily: '$system',
-  color: '$hiContrast',
-});
 
 const Link = styled('a', {
   fontFamily: '$system',
@@ -45,8 +41,10 @@ const Home: React.FC = () => {
       </Head>
       <Container size={{ '@initial': '1', '@bp1': '2' }}>
         <StitchesLogo />
-        <Text as="h1">Hello, from Stitches.</Text>
-        <Text>
+        <Text as="h1" size="9" variant="red" gradient={true}>
+          Hello stitches
+        </Text>
+        <Text as="p" variant="contrast">
           For full documentation, visit{' '}
           <Link href="https://stitches.dev">stitches.dev</Link>.
         </Text>

@@ -8,7 +8,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Design System</title>
+        <title>Orange</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
