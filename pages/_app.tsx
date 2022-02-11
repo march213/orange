@@ -1,10 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import type { AppProps /*, AppContext */ } from 'next/app';
 import '../styles.css';
+
+import Head from 'next/head';
+import React, { FC } from 'react';
+
 import { DesignSystemProvider } from '../components/DesignSystemProvider';
 
-function App({ Component, pageProps }: AppProps) {
+import type { AppProps } from 'next/app';
+const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <DesignSystemProvider>
       <div>
@@ -20,7 +22,7 @@ function App({ Component, pageProps }: AppProps) {
       </div>
     </DesignSystemProvider>
   );
-}
+};
 
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to
