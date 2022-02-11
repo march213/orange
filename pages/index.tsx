@@ -12,7 +12,7 @@ const Text = styled('p', {
 const Link = styled('a', {
   fontFamily: '$system',
   textDecoration: 'none',
-  color: '$olive9',
+  color: '$plum9',
 });
 
 const Container = styled('div', {
