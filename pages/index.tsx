@@ -1,11 +1,8 @@
-import { Button, Text } from 'components';
-import StitchesLogo from 'components/StitchesLogo';
+import { Box, Button, Text } from 'components';
 import Head from 'next/head';
 import { styled } from 'stitches.config';
 
-import { FaceIcon, ImageIcon, SunIcon } from '@radix-ui/react-icons';
-
-const Box = styled('div', {});
+import { ArrowRightIcon } from '@radix-ui/react-icons';
 
 const Link = styled('a', {
   fontFamily: '$system',
@@ -40,20 +37,32 @@ const Home: React.FC = () => {
         <title>Use Stitches with Next.js</title>
       </Head>
       <Container size={{ '@initial': '1', '@bp1': '2' }}>
-        <StitchesLogo />
         <Text as="h1" size="9" variant="bronze" gradient>
           Hello stitches
         </Text>
-        <Text as="p" variant="contrast">
-          For full documentation, visit{' '}
-          <Link href="https://stitches.dev">stitches.dev</Link>.
-        </Text>
-        <Button type="button" variant="plum" size="3">
-          Submit
-        </Button>
-        <FaceIcon />
-        <SunIcon />
-        <ImageIcon />
+        <Box css={{ mt: '$4' }}>
+          <Text as="p" variant="contrast">
+            For full documentation, visit{' '}
+            <Link href="https://stitches.dev">stitches.dev</Link>.
+          </Text>
+        </Box>
+        <Box
+          css={{
+            display: 'flex',
+            gridGap: '24px',
+            mt: '$4',
+          }}
+        >
+          <Button type="button" variant="primary" size="3">
+            Submit
+          </Button>
+          <Button type="button" variant="primary" ghost size="3">
+            Submit
+            <ArrowRightIcon
+              style={{ width: '16px', height: '16px', marginLeft: '20px' }}
+            />
+          </Button>
+        </Box>
       </Container>
     </Box>
   );
