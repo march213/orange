@@ -41,7 +41,7 @@ const Home: React.FC = () => {
       </Head>
       <Container size={{ '@initial': '1', '@bp1': '2' }}>
         <StitchesLogo />
-        <Text as="h1" size="9" variant="red" gradient={true}>
+        <Text as="h1" size="9" variant="bronze" gradient>
           Hello stitches
         </Text>
         <Text as="p" variant="contrast">
