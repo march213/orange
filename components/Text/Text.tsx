@@ -104,7 +104,6 @@ export const Text = styled(TextComponent, {
         color: '$hiContrast',
       },
     },
-
     gradient: {
       true: {
         WebkitBackgroundClip: 'text',

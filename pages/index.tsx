@@ -1,4 +1,4 @@
-import { Text } from 'components';
+import { Button, Text } from 'components';
 import StitchesLogo from 'components/StitchesLogo';
 import Head from 'next/head';
 import { styled } from 'stitches.config';
@@ -48,6 +48,9 @@ const Home: React.FC = () => {
           For full documentation, visit{' '}
           <Link href="https://stitches.dev">stitches.dev</Link>.
         </Text>
+        <Button type="button" variant="plum" size="3">
+          Submit
+        </Button>
         <FaceIcon />
         <SunIcon />
         <ImageIcon />
