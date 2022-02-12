@@ -2,7 +2,7 @@ import { Box, Button, Text } from 'components';
 import Head from 'next/head';
 import { styled } from 'stitches.config';
 
-import { ArrowRightIcon } from '@radix-ui/react-icons';
+import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 const Link = styled('a', {
   fontFamily: '$system',
@@ -37,8 +37,8 @@ const Home: React.FC = () => {
         <title>Use Stitches with Next.js</title>
       </Head>
       <Container size={{ '@initial': '1', '@bp1': '2' }}>
-        <Text as="h1" size="9" variant="bronze" gradient>
-          Hello stitches
+        <Text as="h1" size="9" variant="purple" gradient>
+          Curses
         </Text>
         <Box css={{ mt: '$4' }}>
           <Text as="p" variant="contrast">
@@ -53,13 +53,14 @@ const Home: React.FC = () => {
             mt: '$4',
           }}
         >
-          <Button type="button" variant="primary" size="3">
-            Submit
+          <Button type="button" variant="primary" size="2">
+            Learn more
           </Button>
-          <Button type="button" variant="primary" ghost size="3">
-            Submit
-            <ArrowRightIcon
-              style={{ width: '16px', height: '16px', marginLeft: '20px' }}
+          <Button type="button" variant="primary" ghost size="2">
+            Read reviews
+            <ChevronRightIcon
+              color="currentColor"
+              style={{ width: '16px', height: '16px', marginLeft: '8px' }}
             />
           </Button>
         </Box>

@@ -7,7 +7,7 @@ export const Button = styled('button', {
   boxSizing: 'border-box',
   userSelect: 'none',
   cursor: 'pointer',
-  transition: 'background 0.2s ease-in-out',
+  transition: 'background 0.32s ease',
 
   '&::before': {
     boxSizing: 'border-box',
