@@ -22,6 +22,7 @@ export const Text = styled(TextComponent, {
       },
       '3': {
         fontSize: '$3',
+        lineHeight: '1.5',
       },
       '4': {
         fontSize: '$4',

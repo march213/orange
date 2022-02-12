@@ -1,14 +1,9 @@
-import { Box, Button, Text } from 'components';
+import { Badge, Box, Button, Text } from 'components';
 import Head from 'next/head';
+import Link from 'next/Link';
 import { styled } from 'stitches.config';
 
 import { ChevronRightIcon } from '@radix-ui/react-icons';
-
-const Link = styled('a', {
-  fontFamily: '$system',
-  textDecoration: 'none',
-  color: '$blue12',
-});
 
 const Container = styled('div', {
   mx: 'auto',
@@ -42,9 +37,20 @@ const Home: React.FC = () => {
         </Text>
         <Box css={{ mt: '$4' }}>
           <Text as="p" variant="contrast">
-            For full documentation, visit{' '}
-            <Link href="https://stitches.dev">stitches.dev</Link>.
+            Студенты освоят не только hard skills, необходимые для работы
+            веб-дизайнером, но и soft skills — навыки, которые позволят
+            эффективно взаимодействовать в команде с менеджерами, разработчиками
+            и маркетологами. Выпускники факультета могут успешно конкурировать с
+            веб-дизайнерами уровня middle.
           </Text>
+          <Badge>badge</Badge>
+          <Badge variant="green" size="2">
+            <Link href="/" passHref>
+              <a style={{ textDecoration: 'none', color: 'currentColor' }}>
+                badge
+              </a>
+            </Link>
+          </Badge>
         </Box>
         <Box
           css={{
