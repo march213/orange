@@ -4,6 +4,7 @@ import Link from 'next/Link';
 import { styled } from 'stitches.config';
 
 import { ChevronRightIcon } from '@radix-ui/react-icons';
+import { Rating } from 'components/Rating';
 
 const Container = styled('div', {
   mx: 'auto',
@@ -29,11 +30,11 @@ const Home: React.FC = () => {
   return (
     <Box css={{ py: '$6' }}>
       <Head key={Math.random()}>
-        <title>Use Stitches with Next.js</title>
+        <title>Courses List</title>
       </Head>
       <Container size={{ '@initial': '1', '@bp1': '2' }}>
         <Text as="h1" size="9" variant="purple" gradient>
-          Curses
+          Courses
         </Text>
         <Box css={{ mt: '$4' }}>
           <Text as="p" variant="contrast">
@@ -69,6 +70,13 @@ const Home: React.FC = () => {
               style={{ width: '16px', height: '16px', marginLeft: '8px' }}
             />
           </Button>
+        </Box>
+        <Box
+          css={{
+            mt: '$4',
+          }}
+        >
+          <Rating setRating={() => {}} isEditable={false} rating={2} />
         </Box>
       </Container>
     </Box>
