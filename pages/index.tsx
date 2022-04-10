@@ -5,6 +5,7 @@ import { styled } from 'stitches.config';
 
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import { Rating } from 'components/Rating';
+import { useState } from 'react';
 
 const Container = styled('div', {
   mx: 'auto',
@@ -27,6 +28,8 @@ const Container = styled('div', {
 });
 
 const Home: React.FC = () => {
+  const [rating, setRating] = useState<number>(0);
+
   return (
     <Box css={{ py: '$6' }}>
       <Head key={Math.random()}>
@@ -76,7 +79,7 @@ const Home: React.FC = () => {
             mt: '$4',
           }}
         >
-          <Rating setRating={() => {}} isEditable={false} rating={2} />
+          <Rating setRating={setRating} rating={rating} isEditable />
         </Box>
       </Container>
     </Box>
