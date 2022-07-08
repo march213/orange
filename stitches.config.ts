@@ -115,9 +115,7 @@ import {
   yellowDarkA,
 } from '@radix-ui/colors';
 import { createStitches } from '@stitches/react';
-
 import type * as Stitches from '@stitches/react';
-export type { VariantProps } from '@stitches/react';
 
 export const {
   styled,
@@ -468,3 +466,5 @@ export const darkTheme = createTheme('dark-theme', {
     shadowDark: 'hsl(206 22% 7% / 20%)',
   },
 });
+
+type CSS = Stitches.CSS<typeof config>;

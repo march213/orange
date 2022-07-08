@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, KeyboardEvent } from 'react';
 import { StarFilledIcon, StarIcon } from '@radix-ui/react-icons';
 import { styled } from 'stitches.config';
 
@@ -24,6 +24,7 @@ export const Rating: FC<RatingProps> = ({
           <div
             role="button"
             key={index}
+            tabIndex={isEditable ? 0 : -1}
             onMouseEnter={() => {
               if (index + 1 !== rating) {
                 setCurrentRating(index + 1);
@@ -38,8 +39,17 @@ export const Rating: FC<RatingProps> = ({
               if (!isEditable) return;
               setRating(index + 1);
             }}
+            onKeyDown={(e: KeyboardEvent<HTMLDivElement>) => {
+              if (!isEditable) return;
+              if (e.code !== 'Space') return;
+              setRating(index + 1);
+            }}
           >
-            {isActive ? <StarFilledIcon /> : <StarIcon />}
+            {isActive ? (
+              <StarFilledIcon style={{ marginRight: '4px' }} />
+            ) : (
+              <StarIcon style={{ marginRight: '4px' }} />
+            )}
           </div>
         );
       })}
@@ -49,6 +59,5 @@ export const Rating: FC<RatingProps> = ({
 
 const Container = styled('div', {
   display: 'flex',
-  gridGap: '$1',
   color: '$purple10',
 });

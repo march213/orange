@@ -29,6 +29,7 @@ const Container = styled('div', {
 
 const Home: React.FC = () => {
   const [rating, setRating] = useState<number>(0);
+  const [something, setSomething] = useState<boolean>(false);
 
   return (
     <Box css={{ py: '$6' }}>
@@ -72,6 +73,9 @@ const Home: React.FC = () => {
               color="currentColor"
               style={{ width: '16px', height: '16px', marginLeft: '8px' }}
             />
+          </Button>
+          <Button variant="green" size="3" onClick={() => setSomething(true)}>
+            click on me
           </Button>
         </Box>
         <Box
